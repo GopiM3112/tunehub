@@ -1,0 +1,118 @@
+html {
+	height: auto;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%,
+		rgba(18, 18, 18, 1) 15%, rgba(30, 29, 29, 1) 30%, rgba(40, 38, 38, 1)
+		45%, rgba(47, 46, 46, 1) 60%, rgba(47, 45, 45, 1) 75%,
+		rgba(44, 41, 41, 1) 90%, rgba(35, 34, 34, 1) 100%);
+}
+
+body {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+nav {
+	background-color: #111110;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 8px;
+	height: 40px;
+}
+
+.logo {
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.container {
+    max-width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    margin: 20px 0;
+}
+
+/*For Unsubscribed Customers */
+.action-button {
+    padding: 15px 30px;
+    margin: 5px 5px;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    border:none;
+    background-color: #fffefe;
+    border-radius: 50px;
+    font-family: 'MontSerrat', sans-serif;
+    transition: background-color font-weight transform 0.3s ease-in-out;
+}
+
+.action-button:hover {
+   	font-weight: 700;
+    background-color:#e6e5e5;
+    transform: scale(1.02);
+}
+
+#table{
+	display: grid;
+	place-items: center;
+	margin: 30px 0;
+	overflow: hidden;
+}
+
+table {	
+    width: 100%;
+    border-collapse: collapse;
+    border-radius:8px;
+    overflow:hidden;
+    margin-top: 20px;
+}
+
+th {
+    padding: 20px;
+    text-align: left;  	
+    border-bottom: 1px solid #ddd;
+}
+
+td {
+    padding: 13px;
+    text-align: left;    
+}
+
+thead, tr {
+    color: #fff;
+    background-color: #111110;   
+}
+
+div#table table tbody tr:hover {
+    background-color: #252425;
+    border-radius: 20px;
+}
+
+/*To add background color*/
+@media screen and (min-width: 100px) {
+	html, body {
+		min-height: 100%;
+	}
+} 

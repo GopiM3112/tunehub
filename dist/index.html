@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - TuneHub</title>
+<link rel="icon" type="image/png" href="/images/logo.png">
+<link rel="stylesheet" href="/css/index.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="/css/footer.css" th:href="@{/css/footer.css}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />	
+</head>
+
+<body>
+	<section class="top-nav">
+      <div><a href="index" class="logo">TuneHub</a></div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+      <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li><a href="login" class="button" id="login">Login</a></li>
+        <li><a href="register" class="button" id="register">Sign up</a></li>
+      </ul>
+    </section>
+	<article class="container">
+	<h2 id="greeting">Welcome to TuneHub</h2>
+	<p id="quotes">Discover and enjoy your favorite tunes with TuneHub.</p>
+	
+	<div class="sections">
+		<div class="section-card">
+			 <section id="featured">
+		        <h3 id="section-heading">Featured Songs</h3>
+		        <div class="song-card">
+		            <img src="images/song1.jpg" alt="Song 1 Cover" width="70" height="80">
+		           
+		            <p>DJ Snake</p>
+		        </div>
+		   	 </section>
+		</div>
+		<div class="section-card">
+		    <section id="genres">
+		        <h3 id="section-heading">Explore Genres</h3>
+		        <div class="genre-card">
+		            <img src="images/song2.png" alt="Genre 1 Image" width="70" height="80">
+		         
+		            <p>Anirudh</p>
+		        </div>
+		    </section>
+		</div>
+		<div class="section-card">
+		    <section id="trending">
+		        <h3 id="section-heading">Trending Now</h3>
+		        <div class="trending-card">
+		            <img src="images/song3..jpg" alt="Trending 1 Image"width="70" height="80">
+		            
+		            <p>Hip Hop Thamizha</p>
+		        </div>
+		    </section>
+		</div>
+			<div class="section-card">
+		    <section id="trending">
+		        <h3 id="section-heading">Trending Now</h3>
+		        <div class="trending-card">
+		            <img src="images/song4..jpg" alt="Trending 1 Image"width="70" height="80">
+		           
+		            <p>AR Rahman</p>
+		        </div>
+		    </section>
+		</div>
+		<div class="section-card">
+		    <section id="genres">
+		        <h3 id="section-heading">Explore Genres</h3>
+		        <div class="genre-card">
+		            <img src="images/song5.jpg" alt="Genre 1 Image" width="70" height="80">
+		           
+		            <p>Yuvan</p>
+		        </div>
+		    </section>
+		</div>
+   </div>
+</article>
+<div th:replace="~{footer :: footer}"></div>
+</body>
+</html>

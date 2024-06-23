@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playlists</title>
+<link rel="icon" type="image/png" href="/images/logo.png">
+<link rel="stylesheet" type="text/css" href="/css/viewplaylist.css">
+<link rel="stylesheet" type="text/css" href="/css/footer.css" th:href="@{/css/footer.css}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+	rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="index" class="logo">TuneHub</a>
+		</nav>
+	</header>
+	<div id="table">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Playlist name</th>
+					<th>Song name</th>
+					<th>Song</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="playlist:${playlists}">
+		            <td th:text="${playlist.name}"></td>
+		            <td>
+		                <table >
+		                    <tr id="songs" th:each="song:${playlist.songs}">
+		                        <td th:text="${song.name}"></td>
+		                    </tr>
+		                </table>
+		            </td>
+		            <td>
+		                <table>
+		                    <tr id="songs" th:each="song:${playlist.songs}">
+		                        <td>
+		                            <audio controls>
+		                                <source th:src="${song.link}">
+		                            </audio>
+		                        </td>
+		                    </tr>
+		                </table>
+		            </td>
+		        </tr>
+			</tbody>
+		</table>
+
+	</div>
+	<div th:replace="~{footer :: footer}"></div>
+</body>
+</html>
