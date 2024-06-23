@@ -1,0 +1,110 @@
+html {
+	height: auto;
+	background: rgb(80, 80, 80);
+	background: linear-gradient(0deg, rgba(60, 60, 60, 1) 0%,
+		rgba(50, 50, 50, 1) 15%, rgba(40, 40, 40, 1) 30%, rgba(30, 30, 30, 1)
+		45%, rgba(20, 20, 20, 1) 60%, rgba(10, 10, 10, 1) 75%,
+		rgba(5, 5, 5, 1) 90%, rgba(0, 0, 0, 1) 100%);
+}
+
+body {
+	color: #fff;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+nav {
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 8px;
+	height: 40px;
+}
+
+.logo {
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.premium-body {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	width: 50%;
+	margin: 50px 100px;
+}
+
+.heading {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.heading h1 {
+	font-size: 2em;
+	color: #850de0;
+	margin-bottom: 10px;
+}
+
+.heading h5 {
+	font-size: 1em;
+	color: #888;
+	font-weight: 500;
+}
+
+#payment-form {
+	text-align: left;
+}
+
+.buy-button {
+	margin: 0 auto;
+	padding: 15px 30px;
+	font-weight: normal;
+	width: 190px;
+	font-size: 16px;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	background-color: #850de0;
+	border-radius: 50px;
+	font-family: 'MontSerrat', sans-serif;
+	transition: background-color font-weight transform 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+	font-weight: 700;
+	background-color: #9433de;
+	transform: scale(1.02);
+}
+
+.para {
+	text-align: left;
+	margin-top: 20px;
+}
+
+.para p {
+	font-size: 0.8em;
+	color: #888;
+}
+
+.para a {
+	color: #3498db;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.para a:hover {
+	text-decoration: underline;
+}
+
+/*To add background color*/
+@media screen and (min-width: 100px) {
+	html, body {
+		min-height: 100%;
+	}
+} 

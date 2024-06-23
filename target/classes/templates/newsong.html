@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Songs</title>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="/css/newsong.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css" th:href="@{/css/footer.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index" class="logo">TuneHub</a>
+    </nav>
+</header>
+    <div class="container">
+        <h3>Songs Details</h3>
+        <form id="song-form" action="addsong" method="post">
+            <div class="form-group">
+                <label for="songname" class="label">Song Name:</label>
+                <input type="text" id="songname" placeholder="Enter the Song Name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="artist" class="label">Artist:</label>
+                <input type="text" id="artist" placeholder="Enter the Artist" name="artist" required>
+            </div>
+
+            <div class="form-group">
+                <label for="genre" class="label">Song Genre:</label>
+                <input type="text" id="genre" placeholder="Enter the Genre" name="genre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="link" class="label">Song Link:</label>
+                <input type="text" id="link" placeholder="Enter the Song Link" name="link" required>
+            </div>
+
+            <div id="button">
+                <input type="submit" value="Add Song" id="add-button">
+            </div>
+        </form>
+    </div>
+    <div th:replace="~{footer :: footer}"></div>
+
+    <!-- Popup message -->
+    <div id="popup-message" class="popup">
+        <p>Song added</p>
+    </div>
+
+    <script>
+        document.getElementById('song-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            var popup = document.getElementById('popup-message');
+            popup.style.display = 'block';
+            setTimeout(function() {
+                popup.style.display = 'none';
+                document.getElementById('song-form').submit(); // Submit the form programmatically
+            }, 2000); // Show the popup for 2 seconds
+        });
+    </script>
+</body>
+</html>

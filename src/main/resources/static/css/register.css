@@ -1,0 +1,230 @@
+html {
+    height: auto;
+    background: rgb(245, 245, 245);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 100%);
+}
+
+body {
+    color: #2C3E50;
+    font-family: 'MontSerrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #F9F9F9;
+}
+
+nav {
+    background-color: #FFFFFF;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: #2C3E50;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    color: #2C3E50;
+}
+
+#label-heading {
+    color: #2C3E50;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+input {
+    background-color: #F2F2F2;
+    color: #2C3E50;
+}
+
+#input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 400px;
+    max-width: 100%;
+    height: 70px;
+    max-height: 100px;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+    color: #2C3E50;
+    font-family: 'MontSerrat', sans-serif;
+    font-weight: 500;
+}
+
+input::placeholder {
+    color: #7F8C8D;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+}
+
+.radio-group {
+    display: flex;
+    gap: 5px;
+}
+
+#radio-button {
+    margin: 0 5px 0 5px;
+}
+
+#radio-label {
+    margin-top: 10px;
+    color: #2C3E50;
+}
+
+#button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#register-button {
+    margin-top: 20px;
+    color: #FFFFFF;
+    background-color: #2C3E50;
+    width: 120px;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'MontSerrat', sans-serif;
+    transition: background-color font-weight transform 0.3s;
+}
+
+#register-button:hover {
+    font-weight: 700;
+    background-color: #1F2A36;
+    transform: scale(1.02);
+}
+
+/* To add background color */
+@media screen and (min-width: 100px) {
+    html, body {
+        min-height: 100%;
+    }
+}
+
+/* Hamburger Menu Styles */
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #2C3E50;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(44, 62, 80, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+    .menu-button-container {
+        display: flex;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 100px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        background-color: #FFFFFF;
+    }
+    #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 500ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+        border: 1px solid #CCCCCC;
+        height: 3em;
+        padding: 0.5em;
+        transition: height 500ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: #2C3E50;
+        background-color: #FFFFFF;
+    }
+    .menu > li:not(:last-child) {
+        border-bottom: 1px solid #DDDDDD;
+    }
+}

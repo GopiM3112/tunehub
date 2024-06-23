@@ -1,0 +1,251 @@
+html {
+	height: auto;
+	background: linear-gradient(0deg, rgba(232, 241, 250, 1) 0%, rgba(212, 225, 242, 1) 100%);
+}
+
+body {
+	color: #2C3E50;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	background-color: #F4F6F8;
+}
+
+.logo {
+	color: #3498DB;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.top-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #ffffff;
+	border-radius: 8px;
+	color: #2C3E50;
+	height: 50px;
+	padding: 1em;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu > li {
+	margin: 0 1rem;
+	overflow: hidden; 
+}
+
+.menu-button-container {
+	display: none;
+	height: 100%;
+	width: 30px;
+	cursor: pointer;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#menu-toggle {
+	display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+	display: block;
+	background-color: #2C3E50;
+	position: absolute;
+	height: 4px;
+	width: 30px;
+	transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
+	border-radius: 2px;
+}
+
+.menu-button::before {
+	content: '';
+	margin-top: -8px;
+}
+
+.menu-button::after {
+	content: '';
+	margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+	margin-top: 0px;
+	transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+	background: rgba(44, 62, 80, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+	margin-top: 0px;
+	transform: rotate(-405deg);
+}
+
+.container {
+	text-align: center;
+	margin: 20px auto;
+	width: 75%;
+	height: auto;
+	padding: 30px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#greeting {
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #2980B9;
+}
+
+#quotes {
+	font-size: 18px;
+	margin-bottom: 40px;
+	color: #7F8C8D;
+}
+
+.sections {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#section-heading {
+	color: #2980B9;
+	font-size: 20px;
+	margin: 10px;
+}
+
+.section-card {
+	background-color: #ECF0F1;
+	text-align: center;
+	margin: 20px;
+	width: 200px;
+	height: auto; /* Allow height to be auto to accommodate content */
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.song-card, .genre-card, .trending-card {
+	margin: 20px auto;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+} 
+
+/* Ensuring consistent image size within cards */
+.song-card img, .genre-card img, .trending-card img {
+	width: 100%;
+	height: auto;
+	max-height: 150px; /* Adjust the max height as needed */
+	object-fit: cover; /* Ensure the image covers the area without stretching */
+	border-radius: 10px; /* Optional: add rounded corners to images */
+}
+
+/* Adding styles for song title and artist to prevent overflow */
+.song-card h3, .song-card p, .genre-card h3, .trending-card h3, .trending-card p {
+	margin: 5px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.song-card h3, .genre-card h3, .trending-card h3 {
+	font-size: 18px;
+	color: #2C3E50;
+}
+
+.song-card p, .trending-card p {
+	font-size: 14px;
+	color: #7F8C8D;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 15px;
+	margin: 5px 5px;
+	padding: 15px 20px;
+	font-size: 16px;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #2980B9;
+	border-radius: 50px;
+	font-family: 'MontSerrat', sans-serif;
+	transition: background-color font-weight transform 0.3s ease-in-out;
+}
+
+.button:hover {
+	font-weight: 700;
+	background-color: #1F618D;
+	transform: scale(1.02);
+}
+
+/* To add background color */
+@media screen and (min-width: 100px) {
+	html, body {
+		min-height: 100%;
+	}
+} 
+
+/* To add Hamburger menu */
+@media (max-width: 700px) {
+	.menu-button-container {
+		display: flex;
+	}
+	.menu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-top: 100px;
+		width: 100%;
+		flex-direction: column;
+		justify-content: end;
+		align-items: center;
+		background-color: #ffffff;
+	}
+	#menu-toggle ~ .menu li {
+		height: 0;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		transition: height 500ms cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	#menu-toggle:checked ~ .menu li {
+		border: 1px solid #cccccc;
+		height: 3em;
+		padding: 0.5em;
+		transition: height 500ms cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	.menu > li {
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 0.5em 0;
+		width: 100%;
+		color: #2C3E50;
+		background-color: #ffffff;
+	}
+	.menu > li:not(:last-child) {
+		border-bottom: 1px solid #dddddd;
+	}
+}

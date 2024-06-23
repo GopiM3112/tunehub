@@ -1,0 +1,99 @@
+html {
+    height: auto;
+    background: rgb(245, 245, 245);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 100%);
+}
+
+body {
+    color: #2C3E50;
+    font-family: 'MontSerrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #F9F9F9;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #FFFFFF;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: #2C3E50;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+.spacer {
+    flex: 1;
+}
+
+#logout {
+    color: #2C3E50;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 50px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2C3E50;
+    font-weight: 700;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.action-button {
+    margin-top: 20px;
+    color: #FFFFFF;
+    background-color: #2C3E50;
+    width: 200px;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'MontSerrat', sans-serif;
+    transition: background-color font-weight transform 0.3s;
+}
+
+.action-button:hover {
+    font-weight: 700;
+    background-color: #1F2A36;
+    transform: scale(1.02);
+}
+
+@media screen and (min-width: 100px) {
+    html, body {
+        min-height: 100%;
+    }
+}
